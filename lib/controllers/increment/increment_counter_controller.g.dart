@@ -10,7 +10,7 @@ part of 'increment_counter_controller.dart';
 
 mixin _$IncrementCounterS on _IncrementCounter, Store {
   late final _$counterAtom =
-      Atom(name: 'IncrementCounter.counter', context: context);
+      Atom(name: '_IncrementCounter.counter', context: context);
 
   @override
   int get counter {
@@ -25,17 +25,17 @@ mixin _$IncrementCounterS on _IncrementCounter, Store {
     });
   }
 
-  late final _$IncrementCounterActionController =
-      ActionController(name: 'IncrementCounter', context: context);
+  late final _$_IncrementCounterActionController =
+      ActionController(name: '_IncrementCounter', context: context);
 
   @override
   dynamic increment() {
-    final _$actionInfo = _$IncrementCounterActionController.startAction(
-        name: 'IncrementCounter.increment');
+    final _$actionInfo = _$_IncrementCounterActionController.startAction(
+        name: '_IncrementCounter.increment');
     try {
       return super.increment();
     } finally {
-      _$IncrementCounterActionController.endAction(_$actionInfo);
+      _$_IncrementCounterActionController.endAction(_$actionInfo);
     }
   }
 
